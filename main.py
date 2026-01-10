@@ -1,4 +1,8 @@
-print("Hello GitHub")
-print("This is my file")
-print("hello")
-你好
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/ping")
+def ping():
+    return {"message": "pong"}
